@@ -1,0 +1,20 @@
+<div class="container">
+    <table class="table table-dark">
+        <tr>
+            <td>Variable string</td>
+            <td>{{nombre}}</td>
+        </tr>
+        <tr>
+            <td>Nombre</td>
+            <td>{{nombre | uppercase}}</td>
+        </tr>
+        <tr>
+            <td>Nota</td>
+            <td>{{nota + 100}}</td>
+        </tr>
+    </table>
+    <button type="button" class="btn btn-primary" [disabled]="nombre.length==0" (click)="cambiar_nombre()">Cambiar nombre</button>
+    <br>
+    <br>
+    <input type="text" class="form-control" [(ngModel)]="nombre" placeholder="Escriba un texto">
+</div>
